@@ -27,9 +27,9 @@ public class Main {
                 System.out.println(B);
             } else {
                 if (A < C) {
-                    System.out.println(A);
-                } else {
                     System.out.println(C);
+                } else {
+                    System.out.println(A);
                 }
             }
         }
