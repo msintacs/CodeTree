@@ -12,7 +12,7 @@ public class Main {
         int B = Integer.parseInt(st.nextToken());
 
         int sum = 0;
-        for (int i=A; i<B; i++) {
+        for (int i=A; i<=B; i++) {
             if (i % 2 == 0)
                 sum += i;
         }
