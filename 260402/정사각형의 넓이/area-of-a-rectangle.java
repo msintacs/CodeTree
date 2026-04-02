@@ -10,7 +10,7 @@ public class Main {
         int NN = N * N;
 
         System.out.println(NN);
-        if (NN < 5)
+        if (NN <= 5)
             System.out.println("tiny");
     }
 }
