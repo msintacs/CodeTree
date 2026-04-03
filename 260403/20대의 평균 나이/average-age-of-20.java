@@ -12,7 +12,7 @@ public class Main {
         while (true) {
             int n = Integer.parseInt(br.readLine());
 
-            if (n >= 30) 
+            if (n >= 30 || n < 20)
                 break;
 
             sum += n;
