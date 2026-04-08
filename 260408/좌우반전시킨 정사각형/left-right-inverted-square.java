@@ -9,8 +9,8 @@ public class Main {
         int N = Integer.parseInt(br.readLine());
 
         for (int i=0; i<N; i++) {
-            for (int j=N; j>0; j--) {
-                System.out.print((j * (i+1)) + " ");
+            for (int j=0; j<N; j++) {
+                System.out.print(((N-j) * (i+1)) + " ");
             }
             System.out.println();
         }
