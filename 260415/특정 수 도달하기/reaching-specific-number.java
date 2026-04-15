@@ -11,7 +11,11 @@ public class Main {
         int sum = 0;
         int cnt = 0;
         while (true) {
-            int value = Integer.parseInt(st.nextToken());
+            int value = 0;
+            if (st.hasMoreTokens())
+                value = Integer.parseInt(st.nextToken());
+            else
+                break;
 
             if (value >= 250) break;
 
