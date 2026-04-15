@@ -8,10 +8,10 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int[] arr = new int[10];
+        int[] arr = new int[100];
 
         int idx = 0;
-        for (int i=0; i<10; i++) {
+        for (int i=0; i<100; i++) {
             int n = Integer.parseInt(st.nextToken());
             if (n == 0)  {
                 idx = i;
