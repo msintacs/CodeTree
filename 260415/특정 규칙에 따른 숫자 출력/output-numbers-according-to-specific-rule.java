@@ -11,16 +11,11 @@ public class Main {
 
         int cnt = 1;
         for (int i=0; i<N; i++) {
-            
-            if (cnt > 9) {
-                cnt = 1;
-            }
-
             for (int j=0; j<i; j++) {
                 System.out.print("  ");
             }
-
             for (int j=0; j<N-i; j++) {
+                if (cnt > 9) cnt = 1;                
                 System.out.print(cnt++ + " ");
             }
             System.out.println();
