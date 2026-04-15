@@ -10,25 +10,16 @@ public class Main {
         int[] arr = new int[N];
 
         StringTokenizer st = new StringTokenizer(br.readLine());
-        boolean isEmpty = true;
+        int cnt = 0;
         for (int i=0; i<N; i++) {
-            int n = Integer.parseInt(st.nextToken());
-            if (n == 0) continue;
+            int n = Integer.parseInt(st.nextToken());            
             if (n % 2 == 0) {
-                arr[i] = n;
-                isEmpty = false;
+                arr[cnt++] = n;                
             }                
         }
 
-        if (isEmpty) {
-            System.out.print(0);
-            return;
-        }
-
-        for (int i=0; i<N; i++) {
-            int n = arr[N - i - 1];
-            if (n != 0)
-                System.out.print(n + " ");
+        for (int i=cnt-1; i>=0; i--) {
+            System.out.print(arr[i] + " ");
         }
     }
 }
