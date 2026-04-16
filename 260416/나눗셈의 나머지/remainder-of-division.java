@@ -13,7 +13,7 @@ public class Main {
         int dividend  = Integer.parseInt(st.nextToken());
         int divisor = Integer.parseInt(st.nextToken());
 
-        while (dividend > 0) {
+        while (dividend > 1) {
             count[dividend % divisor]++;
             dividend /= divisor;
         }
