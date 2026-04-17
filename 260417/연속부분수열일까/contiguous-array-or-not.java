@@ -26,7 +26,7 @@ public class Main {
         int start = 0;
         int end = B.length;
         boolean isConsecutive = true;
-        while (end < A.length) {
+        while (end <= A.length) {
 
             isConsecutive = true;
 
