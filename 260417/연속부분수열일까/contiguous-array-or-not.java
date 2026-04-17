@@ -23,6 +23,12 @@ public class Main {
             B[i] = Integer.parseInt(st.nextToken());
         }
 
+        if (A.length < B.length) {
+            System.out.print("No");
+            return;
+        }
+
+
         int start = 0;
         int end = B.length;
         boolean isConsecutive = true;
