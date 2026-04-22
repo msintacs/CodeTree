@@ -37,6 +37,6 @@ public class Main {
         }
 
         System.out.println();
-        System.out.println(allSum / (2 * 4));
+        System.out.printf("%.1f", allSum / (2 * 4));
     }
 }
