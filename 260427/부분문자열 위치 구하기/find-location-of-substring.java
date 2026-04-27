@@ -11,7 +11,24 @@ public class Main {
 
         if (str.contains(target)) {
 
-            System.out.print(str.indexOf(target.charAt(0)));
+            int start = 0;
+            int end = target.length() - 1;
+
+            while (end < str.length()) {
+
+                StringBuilder sb = new StringBuilder();
+                for (int i=start; i<=end; i++) {
+                    sb.append(str.charAt(i));
+                }
+                
+                if (target.equals(sb.toString())) {
+                    System.out.print(start);
+                    break;
+                }
+
+                start++;
+                end++;
+            }
 
         } else {
             System.out.print(-1);
