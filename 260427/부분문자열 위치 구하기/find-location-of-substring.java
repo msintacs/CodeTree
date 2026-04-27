@@ -9,16 +9,12 @@ public class Main {
         String str = br.readLine();
         String target = br.readLine();
 
-        int answer = -1;
+        if (str.contains(target)) {
 
-        for (int i=0; i<str.length() - 1; i++) {
-            String tmp = str.charAt(i) + "" + str.charAt(i+1);
-            if (target.equals(tmp)) {
-                answer = i;
-                break;
-            }
+            System.out.print(str.indexOf(target.charAt(0)));
+
+        } else {
+            System.out.print(-1);
         }
-
-        System.out.print(answer);
     }
 }
