@@ -9,27 +9,31 @@ public class Main {
         String A = br.readLine();
         String B = br.readLine();
 
-        int idx = 0;
-        int length = A.length();
-        while (A.length() > B.length()) {
+        while (A.length() >= B.length()) {
+            boolean found = false;
 
-            boolean isSame = true;
-            for (int i=idx; i<B.length(); i++) {
-                if (A.charAt(i) != B.charAt(i)) {
-                    isSame = false;
+            for (int i=0; i <=A.length() - B.length(); i++) {
+
+                boolean isSame = true;
+
+                for (int j=0; j<B.length(); j++) {
+                    if (A.charAt(i + j) != B.charAt(j)) {
+                        isSame = false;
+                        break;
+                    }
+                }
+
+                if (isSame) {
+                    A = A.substring(0, i) + A.substring(i + B.length());
+                    found = true;
                     break;
                 }
             }
-
-            if (isSame) {                
-                A = A.substring(0, idx) + A.substring(idx + B.length());
-                idx = 0;
-                length = A.length();
+            if (!found) {
+                break;
             }
-
-            idx++;
         }
-
+        
         System.out.print(A);
     }
 }
